@@ -1,7 +1,10 @@
 name: protocol
 version: 0.1.0.0
 synopsis: Model distributed system as type-level multi-party protocol
-#description:
+description: |
+  This package provides type to model distributed multi-party protocols,
+  ensuring the continuity of the associated resource state transitions on the type level
+  for all protocol commands and scenarios.
 
 github: epoberezkin/protocol
 homepage: https://github.com/epoberezkin/protocol#readme
@@ -12,6 +15,7 @@ copyright: 2020 Evgeny Poberezkin
 category: Control, Distributed, Protocol
 extra-source-files:
   - README.md
+  - CHANGELOG.md
 
 dependencies:
   - base >= 4.7 && < 5
@@ -22,7 +26,6 @@ library:
   source-dirs: src
 
 ghc-options:
-  - -O2
   - -Wall
   - -Wcompat
   - -Werror=incomplete-patterns

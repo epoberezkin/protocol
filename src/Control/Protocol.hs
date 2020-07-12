@@ -15,7 +15,7 @@
 -- Portability : non-portable
 --
 -- This module provides type 'Protocol' to model distributed multi-party protocols,
--- ensuring the continuity of the associated resource state transition on the type level
+-- ensuring the continuity of the associated resource state transitions on the type level
 -- for all protocol commands and scenarios.
 --
 -- It accepts used-defined data type for protocol commands (GADT of kind 'Command') and
