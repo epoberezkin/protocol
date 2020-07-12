@@ -1,5 +1,5 @@
 name: protocol
-version: 0.1.0.0
+version: 0.1.0.1
 synopsis: Model distributed system as type-level multi-party protocol
 description: |
   This package provides type to model distributed multi-party protocols,
@@ -20,7 +20,7 @@ extra-source-files:
 dependencies:
   - base >= 4.7 && < 5
   - freer-indexed == 0.1.*
-  - singletons == 2.6.*
+  - singletons >= 2.5 && < 2.8
 
 library:
   source-dirs: src
