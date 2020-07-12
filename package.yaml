@@ -1,0 +1,33 @@
+name: protocol
+version: 0.1.0.0
+synopsis: Model distributed system as type-level multi-party protocol
+#description:
+
+github: epoberezkin/protocol
+homepage: https://github.com/epoberezkin/protocol#readme
+license: BSD3
+author: Evgeny Poberezkin
+maintainer: evgeny@poberezkin.com
+copyright: 2020 Evgeny Poberezkin
+category: Control, Distributed, Protocol
+extra-source-files:
+  - README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - freer-indexed == 0.1.*
+  - singletons == 2.6.*
+
+library:
+  source-dirs: src
+
+ghc-options:
+  - -O2
+  - -Wall
+  - -Wcompat
+  - -Werror=incomplete-patterns
+  - -Wunused-type-patterns
+  - -Wredundant-constraints
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wno-name-shadowing
