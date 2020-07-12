@@ -29,8 +29,7 @@
 -- These scenarios can be interpreted in any monad using 'runProtocol' function,
 -- e.g. to print protocol description or diagram or to execute system-level integration tests.
 --
--- See command definition example in @Control.Protocol.Example.'Control.Protocol.Example.Command'@
--- and protocol scenario example in @Control.Protocol.Example.'Control.Protocol.Example.Scenario'@.
+-- See protocol definition and scenario examples in @<./Control-Protocol-Example.html Control.Protocol.Example>@.
 module Control.Protocol
   ( Command,
     Protocol,
@@ -54,7 +53,7 @@ import Data.Singletons
 --
 -- The second tuple defines the party that executes command (e.g., provides some api) with its initial final and states.
 --
--- See @Control.Protocol.Example.'Control.Protocol.Example.Command'@ for command example.
+-- See @<./Control-Protocol-Example.html Control.Protocol.Example>@ for command example.
 type Command party state = (party, state, state) -> (party, state, state) -> Type -> Type
 
 -- | Protocol data type that wraps a command and explicitly adds command participants.
@@ -86,8 +85,6 @@ data ProtocolCmd (cmd :: Command p k) (parties :: [p]) (s :: [k]) (s' :: [k]) (a
 --
 --     * @cmd@ - user-defined command type constructor that should have the kind 'Command'.
 --     * @parties@ - type-level list of participants - it defines the order of participant states in the combined state of the system described by the protocol.
---
--- See @Control.Protocol.Example.'Control.Protocol.Example.Command'@ and @Control.Protocol.Example.'Control.Protocol.Example.Scenario'@
 type Protocol cmd parties = XFree (ProtocolCmd cmd parties)
 
 infix 6 ->:
